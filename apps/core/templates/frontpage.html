@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block title %} Welcome | {% endblock %} 
 
 {% block content %}
     <div class="columns is-multiline">
@@ -18,7 +19,7 @@
                     </div>
                 </div>
                 <footer class="card-footer">
-                    <a href="{% url 'product_detail' product.slug  %}" class="card-footer-item">View</a>
+                    <a href="{% url 'product_detail' product.category.slug product.slug  %}" class="card-footer-item">View</a>
                 </footer>
             </div>
         </div>
